@@ -41,13 +41,14 @@ export default function Home() {
   };
 
   return (
-    <div style={{ display: "flex", height: "100vh", fontFamily: "Arial, sans-serif" }}>
-      <Sidebar chats={chats} onNewChat={handleNewChat} onSelectChat={handleSelectChat} />
-      <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
-        <ChatWindow messages={messages} />
-        <MessageInput onSend={handleSend} onStop={handleStop} isStreaming={isStreaming} />
-      </div>
-    </div>
+    <div className="flex h-screen font-sans">
+  <Sidebar chats={chats} onNewChat={handleNewChat} onSelectChat={handleSelectChat} />
+  <div className="flex-1 flex flex-col">
+    <ChatWindow messages={messages} />
+    <MessageInput onSend={handleSend} onStop={handleStop} isStreaming={isStreaming} />
+  </div>
+</div>
+
   );
 
 }
